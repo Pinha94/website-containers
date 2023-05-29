@@ -1,0 +1,553 @@
+/*
+ * Theme Name:  Blocksy Child
+ * Description: Tema hijo para hacer personalizaciones de código
+ * Author:      Lautaro Pinharanda
+ * Template:    blocksy
+ * Version:     1.0
+ * Text Domain: blocksy-child
+*/
+
+/* Font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --fontFamily1: 'Montserrat', sans-serif;
+    --paletteColor1: #1c272d;
+    --paletteColor2: #171b1e;
+    --paletteColor3: rgb(158, 126, 43);
+    --paletteColor4: rgb(44, 38, 75);
+}
+
+/*  ======================================================
+                        GLOBALES
+    ====================================================== */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-family: var(--fontFamily1);
+}
+body, *, *::before, *::after {
+    transition: inherit;
+    box-sizing: border-box;
+}
+.container {
+    width: calc(100% - 4rem);
+    max-width: 100rem;
+    margin: 0 auto;
+}
+@media (min-width:780px) {
+    .container.container-small {
+        max-width: 80rem;
+    }
+}
+p,a,span {
+    font-size: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*  ======================================================
+                        UTILIDADES
+    ====================================================== */
+.seccion {margin-bottom: 8rem;}
+.seccion .title-content {
+    text-transform: uppercase;
+}
+.seccion .title-content h2.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 8rem;
+}
+.seccion .title-content h3.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4rem;
+}
+.d-block {display: block;}
+.d-flex {display: flex;}
+.d-grid {display: grid;}
+.column-3 {grid-template-columns: repeat(3, 1fr);}
+.column-4 {grid-template-columns: repeat(4, 1fr);}
+.jcc {justify-content: center;}
+.jcsb {justify-content: space-between;}
+.aic {align-items: center;}
+.sombra {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23 27 30 / .7);
+    color: white;
+    backdrop-filter: brightness(.7);
+}
+.golden {color: var(--paletteColor3);}
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(0 0 0 / .3);
+    padding: 15px;
+}
+@media (min-width:780px) {
+    .half-left {
+        text-align-last: left;
+        max-width: 50%;
+    }
+}
+/*  ================
+        Proyectos
+    ================ */
+    .proyectos {
+    display: grid;
+    gap: 4rem;
+}
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    transition: 500ms;
+}
+.proyecto:hover {
+    box-shadow: 0 0 2rem rgb(0 0 0 / .3);
+}
+.proyecto .image {
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    cursor: pointer;
+}
+.proyecto:hover .image::after {
+    content: '\2b';
+    font-family: 'Fontawesome';
+    font-size: 2.2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border: solid .3rem white;
+    border-radius: 50%;
+    left: calc(50% - 2rem);
+    top: calc(50% - 2rem);
+}
+.proyecto:hover .image img {
+    filter: brightness(.3);
+}
+.proyecto .image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.proyecto h4 {
+    margin: 0;
+}
+.proyecto .texto {
+    flex: 1;
+}
+
+
+/*  ======================================================
+                        BOTONES
+    ====================================================== */
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:focus-within {
+    color: white;
+}
+.custom-btn { /*** Boton cláscico ***/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 4rem;
+    color: white;
+    background-color: var(--paletteColor1);
+    padding: 5px 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.custom-btn.slide {             /**** Boton deslizante ****/
+    background-color: var(--paletteColor2);
+    justify-content: start;
+    gap: 2rem;
+    max-width: max-content;
+    overflow: hidden;
+    position: relative;
+    padding-right: 2rem;
+}
+.custom-btn.slide:hover::before {
+    left: 0;
+}
+.custom-btn.slide:hover::after {
+    left: 1rem;
+}
+.custom-btn.slide::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--paletteColor1);
+    position: absolute;
+    left: -80%;
+    top: 0;
+    z-index: 0;
+    transition: 700ms;
+}
+.custom-btn.slide::after {
+    content: '\f061';
+    font-family: 'FontAwesome';
+    z-index: 1;
+    position: relative;
+    left: 0;
+    transition: 700ms;
+}
+.custom-btn.slide span {
+    position: relative;
+    z-index: 1;
+}
+.custom-btn.slide.gray {            /**** Boton deslizante gris ****/
+    background-color: transparent;
+    color: #323232;
+}
+.custom-btn.slide.gray::before {
+    background-color: lightgray;
+}
+.btn-seccion {                      /**** Boton seccion ****/
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--paletteColor4);
+    color: white;
+    width: 80%;
+    max-width: 60rem;
+    height: 7rem;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+.btn-seccion:hover {color: white;}
+.btn-seccion span::after {
+    content: '\f061';
+    font-family: 'FontAwesome';
+    z-index: 1;
+    position: relative;
+    margin-left: 2rem;
+    left: 0;
+    transition: 700ms;
+}
+.btn-seccion:hover span::after {
+    left: 1rem;
+}
+.btn-seccion.left {                      /**** Boton seccion  left ****/
+    right: unset;
+    bottom: -5rem;
+    left: 0;
+    justify-content: end;
+    padding-right: 7%;
+}
+
+/*  ======================================================
+                        HOME
+    ====================================================== */
+#header {
+    color: white;
+    margin-bottom: 8rem;
+}
+/*  ================
+        topbar
+    ================ */
+#header .topbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    min-height: 6rem;
+}
+#header .topbar .topbar-content {
+    display: flex;
+    justify-content: space-between;
+}
+#header .topbar .brand {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    transform: scaleX(.8);
+}
+#header .topbar .brand p {margin: 0;}
+.topbar .main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.topbar .main-menu .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.topbar .search-container {
+    position: relative;
+    border: solid .2rem white;
+    border-radius: 5rem;
+    padding: 0.5rem;
+}
+.topbar .search-container button {
+    background: none;
+    border: none;
+    color: white;
+}
+.topbar .search-container .field {
+    background: none;
+    border: none;
+    color: white;
+}
+.topbar .search-container .field:focus,
+.topbar .search-container .field:focus-visible,
+.topbar .search-container .field:focus-within {
+    border: none;
+    outline: none;
+}
+
+/*  ================
+        Portada
+    ================ */
+#portada {
+    background-image: url(../images/container-house.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: calc(100vh - 11rem);
+    position: relative;
+}
+#portada .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 3rem);
+    max-width: 80rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+@media (min-width:780px) {
+    #portada .content {
+        justify-content: space-between;
+    }
+    #portada .title-content {
+        text-align: left;
+    }
+}
+#portada .title-content h5 {
+    margin: 0;
+    font-size: 2rem;
+}
+#portada .title-content h1 {
+    font-size: 7rem !important;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+}
+#portada .introduccion {
+    font-size: 1.4rem;
+    max-width: 60%;
+}
+
+/*  ================
+        Nosotros
+    ================ */
+body.home #us {margin-bottom: 14rem;}
+#us {
+    background-color: lightgray;
+    position: relative;
+    margin-top: 8rem;
+    padding: 8rem 0;
+}
+#us img {
+    width: 100%;
+}
+@media (min-width:780px) {
+    #us img {
+        position: absolute;
+        right: 0;
+        top: -60px;
+        width: 40%;
+        max-width: 600px;
+        min-width: 300px;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+    }
+}
+
+/*  ========================
+        Últimos proyectos
+    ======================== */
+#nuestrosProyectos .container-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+@media (min-width:780px) {
+    #nuestrosProyectos .container-title {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    #nuestrosProyectos .container-title h2 {
+        margin: 0;
+    }
+    
+}
+#nuestrosProyectos .content {
+    display: grid;
+    gap: 4rem;
+}
+@media (min-width:780px) {
+    #nuestrosProyectos .content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+}
+#nuestrosProyectos .proyecto-container {
+    padding: 1rem;
+    transition: 300ms;
+}
+#nuestrosProyectos .proyecto-container:hover {
+    box-shadow: 0 0 2rem rgb(0 0 0 / .3);
+    transform: scale(1.05);
+}
+#nuestrosProyectos .content img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+#nuestrosProyectos .content h4 {
+    font-size: 2rem;
+    margin: 0;
+}
+#nuestrosProyectos .content .ubicacion {
+    text-transform: uppercase;
+    color: var(--paletteColor3);
+}
+
+/*  ======================================================
+                        INTERNAS
+    ====================================================== */
+.page-template .encabezado {
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 12rem;
+}
+.page-template .encabezado .title-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255 255 255 / .3);
+    backdrop-filter: blur(5px) ;
+    box-shadow: inset 0 0 2rem rgb(0 0 0 /.5);
+}
+
+.team-cards {
+    display: grid;
+    gap: 4rem 2rem;
+}
+@media (min-width:780px) {
+    .team-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width:1024px) {
+    .team-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.team-cards .card {
+    border-radius: 3px;
+}
+.team-cards .card header {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+    /* box-shadow: inset 0 0 2rem rgb(0 0 0 / .3); */
+    background-color: #E2E2E2;
+    /* border-radius: 15px 15px 0 0; */
+}
+.team-cards .card .image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: -3rem;
+    border: solid 5px #D2D2D2;
+}
+.team-cards .card .image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: solid 5px white;
+    border-radius: 50%;
+}
+.team-cards .card .nombre {
+    font-size: 22px;
+    margin: 1rem 0 0;
+    text-align: center;
+}
+.team-cards .card .puesto {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--paletteColor3);
+    text-align: center;
+}
+.team-cards .card .descripcion {
+    font-size: 14px;
+}
+.team-cards .card .enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 3rem;
+    margin: 3rem 0 0;
+    box-shadow: inset 0 0 5px rgb(0 0 0 / .3);
+    /* border-radius: 1rem; */
+}
+    
+/*  ======================================================
+                        ANIMACIONES
+    ====================================================== */
+@keyframes slideRight {
+    from { left: -70%; }
+    to { left: 0; }
+}
