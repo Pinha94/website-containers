@@ -8,8 +8,14 @@
 
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/normalize.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Loader -->
+    <script src="src/js/loader.js"></script>
+    <link rel="stylesheet" href="src/css/loader.css">
 </head>
-<body>
+<body class="overflow-hidden">
+    <div id="loader"></div> <!-- Loader -->
     <header id="header">
         <div id="topbar" class="topbar">
             <div class="container topbar-content">
@@ -37,7 +43,7 @@
                     </div>
                     <div class="introduccion">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis animi totam nihil iste reiciendis expedita, neque aperiam. Aperiam eum iure molestiae molestias veniam iusto magni facere est praesentium velit.</p>
-                        <a href="#" class="custom-btn slide">
+                        <a href="us.html" class="custom-btn slide">
                             <span>About us</span>
                         </a>
                     </div>
@@ -173,8 +179,11 @@
         </section>
     </main>
     <footer id="footer">
-
+        <div class="container">
+            <span class="copy">Website by Lautaro Pinharanda &copy; 2023.</span>
+        </div>
     </footer>
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/bdf4119778.js" crossorigin="anonymous"></script>
 </body>
 </html>
