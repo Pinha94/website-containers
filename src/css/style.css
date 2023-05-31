@@ -373,6 +373,21 @@ img {
 }
 
 /*  ================
+        Footer
+    ================ */
+#footer {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 5rem;
+    background-color: var(--paletteColor1);
+}
+#footer .copy {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/*  ================
         Nosotros
     ================ */
 body.home #us {margin-bottom: 14rem;}
