@@ -7,7 +7,7 @@ $(document).ready(function(){
         setTimeout(() => {
             $('#loader').fadeOut();
             $('body').removeClass('overflow-hidden');
-        }, 3000);
+        }, 2000);
     }
     loader();
 });
