@@ -86,11 +86,14 @@ img {
 .seccion .title-content {
     text-transform: uppercase;
 }
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
 .seccion .title-content h2.title {
     text-align: center;
-    text-transform: uppercase;
     font-weight: 500;
-    letter-spacing: 2px;
     margin-bottom: 8rem;
 }
 /* Seccion columns */
@@ -606,21 +609,51 @@ body.home #us {margin-bottom: 14rem;}
 .single #topbar {
     position: relative;
     background-color: var(--paletteColor1);
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
     box-shadow: 0 .2rem 1rem rgb(0 0 0 / .3);
 }
-.single #destacada {
-    display: block;
-    width: 90%;
-    max-width: 80rem;
-    margin: 0 auto;
+.single #header {
+    margin-bottom: 4rem;
 }
-.single #header h1 {
+.single #header .title {
     color: var(--paletteColor2);
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 .single #main {
     margin-bottom: 8rem;
+}
+.single .descripcion {
+    margin-bottom: 4rem;
+}
+@media (min-width:780px) {
+    .single .descripcion {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+.single #destacada {
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.single .descripcion .card {
+    box-shadow: none;
+    border: solid .4rem goldenrod;
+    background-color: rgb(255 215 0 / .3);
+    color: #454545;
+}
+.single .descripcion .list {
+    font-size: 1.4rem;
+    line-height: 2;
+    padding-left: 2rem;
+}
+.list li {
+    list-style: disc;
 }
 
 /*  ======================================================
