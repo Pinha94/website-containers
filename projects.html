@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Containers - Projects</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Loader -->
+    <script src="src/js/loader.js"></script>
+    <link rel="stylesheet" href="src/css/loader.css">
+</head>
+<body class="archive">
+    <div id="loader"></div> <!-- Loader -->
+    <header id="header">
+        <div id="topbar" class="topbar">
+            <div class="container topbar-content">
+                <div class="brand">
+                    <a href="/"><span class="golden">My</span>Website</a>
+                </div>
+                <nav class="main-menu">
+                    <ul class="menu">
+                        <li class="item-menu"><a href="/">Home</a></li>
+                        <li class="item-menu"><a href="us.html">About us</a></li>
+                        <li class="item-menu"><a href="projects.html">Projects</a></li>
+                        <li class="item-menu"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <form action="" class="search-container">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" name="search" id="searchField" class="field">
+                    </form>
+                </nav>
+            </div>
+        </div>
+        <div id="portada" class="portada">
+            <div class="sombra">
+                <div class="content">
+                    <div class="title-content">
+                        <h1>Last projects</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="seccion">
+            <div class="container content column-4">
+                <article class="proyecto-container">
+                    <a href="myproyect.html" class="proyecto">
+                        <div class="image">
+                            <img src="src/images/container-comercial.jpg" alt="Proyecto 01">
+                        </div>
+                        <div class="content-post">
+                            <h4>Mi proyecto</h4>
+                            <p class="texto">Buenos aires</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <span class="copy">Website by Lautaro Pinharanda &copy; 2023.</span>
+        </div>
+    </footer>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bdf4119778.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Main JqQuery -->
+    <script src="src/js/main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            'use strict';
+            multiplicar($('.proyecto-container'), $('#main .content'), 11);
+        });
+    </script>
+
+</body>
+</html>

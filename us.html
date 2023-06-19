@@ -4,13 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Containers</title>
+    <title>House Containers - About us</title>
 
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/normalize.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Loader -->
+    <script src="src/js/loader.js"></script>
+    <link rel="stylesheet" href="src/css/loader.css">
 </head>
 <body>
-    
+    <div id="loader"></div> <!-- Loader -->
+    <header id="header">
+        <div id="topbar" class="topbar">
+            <div class="container topbar-content">
+                <div class="brand">
+                    <a href="/"><span class="golden">My</span>Website</a>
+                </div>
+                <nav class="main-menu">
+                    <ul class="menu">
+                        <li class="item-menu"><a href="/">Home</a></li>
+                        <li class="item-menu"><a href="us.html">About us</a></li>
+                        <li class="item-menu"><a href="projects.html">Projects</a></li>
+                        <li class="item-menu"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <form action="" class="search-container">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" name="search" id="searchField" class="field">
+                    </form>
+                </nav>
+            </div>
+        </div>
+        <div id="portada" class="portada">
+            <div class="sombra">
+                <div class="content">
+                    <div class="title-content">
+                        <h1>About us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="seccion">
+            <div class="container">
+                <div class="title-content">
+                    <h2 class="title">Our History.</h2>
+                </div>
+                <div class="letter-spacing line-height">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate qui corrupti ad sunt ut, et quo hic deleniti assumenda corporis inventore tempora. Nobis minus hic mollitia sequi nesciunt. Tenetur repellendus voluptates laborum quidem voluptate eligendi at libero delectus sunt eaque.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, nemo at soluta accusantium quaerat sint esse illo officiis voluptas magnam laudantium atque suscipit voluptates maxime, doloremque dolorum neque quas quasi deserunt necessitatibus corrupti facilis! Ipsa harum quis dolorem est odio!</p>
+                </div>
+            </div>
+        </section>
+        <section class="seccion columns banner">
+            <div class="container">
+                <div class="side">
+                    <div class="title-content">
+                        <h2 class="title">Our vision.</h2>
+                    </div>
+                    <div class="descripcion">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores odit nobis hic nostrum quisquam reiciendis sed, officiis esse autem quidem facilis commodi exercitationem at ullam rem eveniet quo cupiditate quod.</p>
+                        <p>Tenetur minus, dolorem obcaecati inventore eum quas odit animi consectetur eius ipsum voluptate nemo dicta. Nemo quaerat, sapiente mollitia veniam, voluptatem assumenda incidunt similique, sunt dignissimos at excepturi consectetur temporibus?</p>
+                        <p>Dignissimos quam officia veniam, velit eos autem. Ipsa, incidunt facilis. Debitis recusandae, beatae expedita placeat facilis, similique illo ducimus deleniti amet, iusto corrupti possimus dolore voluptatibus autem necessitatibus praesentium. Amet?</p>
+                    </div>
+                </div>
+                <div class="side">
+                    <img src="src/images/container-oficina.jpg" alt="Contenedor oficina">
+                </div>
+            </div>
+        </section>
+        <section id="team" class="seccion">
+            <div class="container">
+                <div class="title-content">
+                    <h2 class="title">Our team.</h2>
+                </div>
+                <div class="content grid">
+                    <article class="member">
+                        <div class="image">
+                            <img src="src/images/avatar1.jpg" alt="Miembro 1">
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h3>Jhon Doe</h3>
+                                <h5>Manager</h5>
+                            </div>
+                            <ul class="contact">
+                                <li><i class="fa fa-phone"></i></li>
+                                <li><i class="fa fa-envelope"></i></li>
+                                <li><i class="fa fa-linkedin"></i></li>
+                                <li><i class="fa fa-twitter"></i></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="member">
+                        <div class="image">
+                            <img src="src/images/avatar2.jpg" alt="Miembro 1">
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h3>Marie Stuart</h3>
+                                <h5>sales director</h5>
+                            </div>
+                            <ul class="contact">
+                                <li><i class="fa fa-phone"></i></li>
+                                <li><i class="fa fa-envelope"></i></li>
+                                <li><i class="fa fa-linkedin"></i></li>
+                                <li><i class="fa fa-twitter"></i></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="member">
+                        <div class="image">
+                            <img src="src/images/avatar3.jpg" alt="Miembro 1">
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h3>Jhon Doe</h3>
+                                <h5>Builder</h5>
+                            </div>
+                            <ul class="contact">
+                                <li><i class="fa fa-phone"></i></li>
+                                <li><i class="fa fa-envelope"></i></li>
+                                <li><i class="fa fa-linkedin"></i></li>
+                                <li><i class="fa fa-twitter"></i></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <span class="copy">Website by Lautaro Pinharanda &copy; 2023.</span>
+        </div>
+    </footer>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/bdf4119778.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
