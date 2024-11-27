@@ -1,0 +1,9 @@
+@keyframes slideTop {
+    from { opacity: 0; transform: translateY(10%); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.slide-top { animation: slideTop linear forwards 500ms; }
+@keyframes slideRight {
+    from { left: -70%; }
+    to { left: 0; }
+}
